@@ -21,7 +21,7 @@ header {
 }
 
 .language-toggle {
-  margin-right: 20px; /* Space between button and logo */
+  margin-right: 20px;
 }
 
 #lang-toggle {
@@ -130,6 +130,28 @@ ul li::before {
   font-size: 20px;
 }
 
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.calendar-table th, .calendar-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #555;
+}
+
+.calendar-table th {
+  background: #333;
+  color: orange;
+  font-weight: bold;
+}
+
+.calendar-table td {
+  background: #444;
+}
+
 footer {
   text-align: center;
   padding: 20px;
@@ -155,5 +177,8 @@ footer {
   }
   .page-section {
     padding: 30px 10px;
+  }
+  .calendar-table {
+    font-size: 14px;
   }
 }
