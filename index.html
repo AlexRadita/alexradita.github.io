@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alex Radita - Karting Star</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <!-- Language Toggle Button -->
+    <div class="language-toggle">
+      <button id="lang-toggle" onclick="toggleLanguage()">RO</button>
+    </div>
+    <h1 class="logo">Alex Radita</h1>
+    <nav>
+      <a href="#home" data-lang="nav-home">Home</a>
+      <a href="#about" data-lang="nav-about">About</a>
+      <a href="#achievements" data-lang="nav-achievements">Achievements</a>
+      <a href="#sponsorship" data-lang="nav-sponsorship">Sponsor Me</a>
+      <a href="#media" data-lang="nav-media">Media</a>
+      <a href="#contact" data-lang="nav-contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="page-section">
+      <h2 data-lang="home-title">Welcome to My Karting Journey</h2>
+      <p data-lang="home-content">Hey there! I’m Alex Radita, a rental karting driver from Romania with a passion for speed and competition. Explore my story, achievements, and how you can support my racing dreams.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="page-section">
+      <h2 data-lang="about-title">About Me</h2>
+      <p data-lang="about-content">I’m Alex Radita, a Romanian driver in the European Rental Karting Championship. My karting journey began in early 2024, where I hit the top 200 out of over 10,000 drivers in my first session. By May, I’d climbed to the top 50 in the Junior category, and in July, I got a week to train in a race kart—though funding for pro racing wasn’t there yet. That experience fueled my drive, and I soon earned a spot in adult karts. In December 2024, I signed up for the European Rental Karting Championship, and now I’m all in to find sponsors to fuel my dream of going pro.</p>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="page-section">
+      <h2 data-lang="achievements-title">Achievements</h2>
+      <ul>
+        <li data-lang="achievements-1">Climbed to Top 50 in the Junior category in just a few weeks</li>
+        <li data-lang="achievements-2">Trained in a race kart for a week in July 2024, sharpening my skills</li>
+        <li data-lang="achievements-3">Will race for the European Rental Karting Championship in Summer 2025</li>
+      </ul>
+    </section>
+
+    <!-- Sponsor Me Section -->
+    <section id="sponsorship" class="page-section">
+      <h2 data-lang="sponsorship-title">Sponsor Me</h2>
+      <p data-lang="sponsorship-content">Why back me? I bring talent from Europe’s rental karting scene, a growing 6,000+ Instagram following, and the potential to go pro. You’ll get your logo on my suit, shoutouts to my followers, and a stake in my racing journey. Contact me at alexradita@example.com or @alexradita_racing to team up!</p>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media" class="page-section">
+      <h2 data-lang="media-title">Media</h2>
+      <p data-lang="media-content">Racing pics coming soon—follow my journey on Instagram at @alexradita_racing!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-section">
+      <h2 data-lang="contact-title">Contact</h2>
+      <p data-lang="contact-content">Ready to support my racing dream? Reach out at alexradita@example.com or DM me on Instagram at @alexradita_racing. Let’s make it happen!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p data-lang="footer-content">© 2025 Alex Radita. All rights reserved.</p>
+  </footer>
+
+  <!-- Smooth Scroll JavaScript -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <!-- Language Toggle JavaScript -->
+  <script>
+    const translations = {
+      en: {
+        "nav-home": "Home",
+        "nav-about": "About",
+        "nav-achievements": "Achievements",
+        "nav-sponsorship": "Sponsor Me",
+        "nav-media": "Media",
+        "nav-contact": "Contact",
+        "home-title": "Welcome to My Karting Journey",
+        "home-content": "Hey there! I’m Alex Radita, a rental karting driver from Romania with a passion for speed and competition. Explore my story, achievements, and how you can support my racing dreams.",
+        "about-title": "About Me",
+        "about-content": "I’m Alex Radita, a Romanian driver in the European Rental Karting Championship. My karting journey began in early 2024, where I hit the top 200 out of over 10,000 drivers in my first session. By May, I’d climbed to the top 50 in the Junior category, and in July, I got a week to train in a race kart—though funding for pro racing wasn’t there yet. That experience fueled my drive, and I soon earned a spot in adult karts. In December 2024, I signed up for the European Rental Karting Championship, and now I’m all in to find sponsors to fuel my dream of going pro.",
+        "achievements-title": "Achievements",
+        "achievements-1": "Climbed to Top 50 in the Junior category in just a few weeks",
+        "achievements-2": "Trained in a race kart for a week in July 2024, sharpening my skills",
+        "achievements-3": "Will race for the European Rental Karting Championship in Summer 2025",
+        "sponsorship-title": "Sponsor Me",
+        "sponsorship-content": "Why back me? I bring talent from Europe’s rental karting scene, a growing 6,000+ Instagram following, and the potential to go pro. You’ll get your logo on my suit, shoutouts to my followers, and a stake in my racing journey. Contact me at alexradita@example.com or @alexradita_racing to team up!",
+        "media-title": "Media",
+        "media-content": "Racing pics coming soon—follow my journey on Instagram at @alexradita_racing!",
+        "contact-title": "Contact",
+        "contact-content": "Ready to support my racing dream? Reach out at alexradita@example.com or DM me on Instagram at @alexradita_racing. Let’s make it happen!",
+        "footer-content": "© 2025 Alex Radita. All rights reserved."
+      },
+      ro: {
+        "nav-home": "Acasă",
+        "nav-about": "Despre",
+        "nav-achievements": "Realizări",
+        "nav-sponsorship": "Sponsorizează-mă",
+        "nav-media": "Media",
+        "nav-contact": "Contact",
+        "home-title": "Bun venit în călătoria mea de karting",
+        "home-content": "Bună! Sunt Alex Radita, un pilot de karting de închiriat din România, pasionat de viteză și competiție. Descoperă povestea mea, realizările și cum poți susține visurile mele de curse.",
+        "about-title": "Despre Mine",
+        "about-content": "Sunt Alex Radita, un pilot român în Campionatul European de Karting de Închiriat. Călătoria mea în karting a început la începutul anului 2024, când am ajuns în primii 200 din peste 10.000 de piloți la prima mea sesiune. Până în mai, am urcat în primii 50 în categoria Junior, iar în iulie am avut o săptămână de antrenament într-un kart de curse—deși nu am avut fonduri pentru curse profesionale. Acea experiență mi-a alimentat ambiția, și curând am câștigat un loc în karturile pentru adulți. În decembrie 2024, m-am înscris în Campionatul European de Karting de Închiriat, iar acum fac tot posibilul să găsesc sponsori pentru a-mi susține visul de a deveni profesionist.",
+        "achievements-title": "Realizări",
+        "achievements-1": "Urcat în primii 50 în categoria Junior în doar câteva săptămâni",
+        "achievements-2": "Antrenat timp de o săptămână într-un kart de curse în iulie 2024, îmbunătățindu-mi abilitățile",
+        "achievements-3": "Voi concura în Campionatul European de Karting de Închiriat în vara lui 2025",
+        "sponsorship-title": "Sponsorizează-mă",
+        "sponsorship-content": "De ce să mă susții? Aduc talent din scena europeană de karting de închiriat, peste 6.000 de urmăritori pe Instagram și potențial de a deveni profesionist. Vei beneficia de logo-ul tău pe echipamentul meu, menționări pentru urmăritorii mei și un rol în călătoria mea de curse. Contactează-mă la alexradita@example.com sau @alexradita_racing pentru a ne asocia!",
+        "media-title": "Media",
+        "media-content": "Poze din curse vor veni în curând—urmărește-mi călătoria pe Instagram la @alexradita_racing!",
+        "contact-title": "Contact",
+        "contact-content": "Gata să susții visul meu de curse? Contactează-mă la alexradita@example.com sau trimite-mi un mesaj pe Instagram la @alexradita_racing. Hai să facem asta împreună!",
+        "footer-content": "© 2025 Alex Radita. Toate drepturile rezervate."
+      }
+    };
+
+    let currentLang = 'en'; // Default language is English
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'ro' : 'en';
+      document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'RO' : 'EN';
+      document.querySelectorAll('[data-lang]').forEach(element => {
+        const key = element.getAttribute('data-lang');
+        element.textContent = translations[currentLang][key];
+      });
+    }
+
+    // Set initial language to English manually
+    document.querySelectorAll('[data-lang]').forEach(element => {
+      const key = element.getAttribute('data-lang');
+      element.textContent = translations.en[key];
+    });
+  </script>
+</body>
+</html>

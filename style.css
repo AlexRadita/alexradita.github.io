@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  background: black;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.language-toggle {
+  margin-right: 20px; /* Space between button and logo */
+}
+
+#lang-toggle {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#lang-toggle:hover {
+  background: red;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  border-bottom: 2px solid red;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  color: orange;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+nav a:first-child {
+  margin-left: 0;
+}
+
+nav a:hover {
+  background: red;
+  color: white;
+  border-radius: 5px;
+}
+
+.page-section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #222;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+h2 {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+h2::before, h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: red;
+}
+
+h2::before {
+  top: -10px;
+}
+
+h2::after {
+  bottom: -10px;
+}
+
+p, li {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 20px;
+}
+
+ul li::before {
+  content: "•";
+  color: red;
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: white;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .language-toggle {
+    margin: 0 0 20px 0;
+  }
+  nav {
+    margin-top: 20px;
+  }
+  nav a {
+    margin: 10px 0;
+    display: block;
+  }
+  .page-section {
+    padding: 30px 10px;
+  }
+}
