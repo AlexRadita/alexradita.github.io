@@ -13,7 +13,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 20px;
+  padding: 20px 20px;
   background: #000;
   position: sticky;
   top: 0;
@@ -41,10 +41,18 @@ header {
 }
 
 .logo {
-  font-size: 36px;
-  font-weight: bold;
-  color: white;
-  border-bottom: 2px solid red;
+  max-height: 50px; /* Adjusted for the wider, horizontal logo */
+  max-width: 150px; /* Prevent it from stretching too wide */
+  width: auto;
+  padding: 5px;
+  border: 2px solid red; /* Red border to match theme */
+  border-radius: 5px;
+  background: #222; /* Dark background to make white logo pop */
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
 nav {
@@ -164,12 +172,18 @@ footer {
   header {
     flex-direction: column;
     text-align: center;
+    padding: 15px 20px;
   }
   .language-toggle {
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
+  }
+  .logo {
+    max-height: 40px; /* Smaller on mobile */
+    max-width: 120px;
+    margin: 10px 0;
   }
   nav {
-    margin-top: 20px;
+    margin-top: 15px;
   }
   nav a {
     margin: 10px 0;
