@@ -1,275 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Alex Radita - Karting Star</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Add favicon -->
-  <link rel="icon" type="image/png" href="logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Radita - Karting Star</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="language-toggle">
-      <button id="lang-toggle" onclick="toggleLanguage()">RO</button>
-    </div>
-    <a href="#home">
-      <img src="logo.png" alt="Alex Radita Logo" class="logo" data-lang="logo-alt">
-    </a>
-    <nav>
-      <a href="#home" data-lang="nav-home">Home</a>
-      <a href="#about" data-lang="nav-about">About</a>
-      <a href="#achievements" data-lang="nav-achievements">Achievements</a>
-      <a href="#calendar" data-lang="nav-calendar">Calendar</a>
-      <a href="#sponsorship" data-lang="nav-sponsorship">Sponsor Me</a>
-      <a href="#media" data-lang="nav-media">Media</a>
-      <a href="#contact" data-lang="nav-contact">Contact</a>
+    <nav class="navbar">
+        <a href="#hero">Home</a>
+        <a href="#why-sponsor">Why Sponsor</a>
+        <a href="#about">About</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#media">Media</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </header>
-
-  <main>
-    <section id="home" class="page-section">
-      <h2 data-lang="home-title">Welcome to My Karting Journey</h2>
-      <p data-lang="home-content">Hey there! I’m Alex Radita, a rental karting driver from Romania with a passion for speed and competition. Explore my story, achievements, and how you can support my racing dreams.</p>
+    <header id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="animate-fade-in">Alex Radita</h1>
+            <p class="animate-fade-in">Rising Star in European Karting</p>
+            <a href="#why-sponsor" class="btn animate-fade-in">Sponsor Me</a>
+        </div>
+    </header>
+    <section id="why-sponsor" class="section fade-in">
+        <h2>Why Sponsor Alex?</h2>
+        <div class="benefits">
+            <div>
+                <i class="fas fa-users"></i>
+                <h3>Reach a Growing Audience</h3>
+                <p>With over 6,000 Instagram followers and counting, your brand will gain visibility.</p>
+            </div>
+            <div>
+                <i class="fas fa-trophy"></i>
+                <h3>Align with Success</h3>
+                <p>Sponsor a rising star with a track record of achievements.</p>
+            </div>
+            <div>
+                <i class="fas fa-handshake"></i>
+                <h3>Partnership Opportunities</h3>
+                <p>Collaborate on events, promotions, and more.</p>
+            </div>
+        </div>
     </section>
-
-    <section id="about" class="page-section">
-      <h2 data-lang="about-title">About Me</h2>
-      <p data-lang="about-content">I’m Alex Radita, a Romanian driver in the European Rental Karting Championship. My karting journey began in early 2024, where I hit the top 200 out of over 10,000 drivers in my first session. By May, I’d climbed to the top 50 in the Junior category, and in July, I got a week to train in a race kart—though funding for pro racing wasn’t there yet. That experience fueled my drive, and I soon earned a spot in adult karts. In December 2024, I signed up for the European Rental Karting Championship, and now I’m all in to find sponsors to fuel my dream of going pro.</p>
+    <section id="about" class="section fade-in">
+        <h2>About Alex</h2>
+        <p>[Add your bio here with a photo]</p>
     </section>
-
-    <section id="achievements" class="page-section">
-      <h2 data-lang="achievements-title">Achievements</h2>
-      <ul>
-        <li data-lang="achievements-1">Climbed to Top 50 in the Junior category in just a few weeks</li>
-        <li data-lang="achievements-2">Trained in a race kart for a week in July 2024, sharpening my skills</li>
-        <li data-lang="achievements-3">Will race for the European Rental Karting Championship in Summer 2025</li>
-      </ul>
-      <h3 data-lang="stats-title">Performance Stats</h3>
-      <table class="stats-table">
-        <thead>
-          <tr>
-            <th data-lang="stats-event">Event</th>
-            <th data-lang="stats-date">Date</th>
-            <th data-lang="stats-ranking">Ranking</th>
-            <th data-lang="stats-lap-time">Best Lap Time</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-lang="stats-event-1">First Session 2024</td>
-            <td>Early 2024</td>
-            <td>Top 200 / 10,000+</td>
-            <td>59.947</td>
-          </tr>
-          <tr>
-            <td data-lang="stats-event-2">Junior Category Peak</td>
-            <td>May 2024</td>
-            <td>Top 50</td>
-            <td>55.047</td>
-          </tr>
-          <tr>
-            <td data-lang="stats-event-3">Race Kart Training</td>
-            <td>July 2024</td>
-            <td>1 (out of 15 drivers)</td>
-            <td>1:02 (est.)</td>
-          </tr>
-          <tr>
-            <td data-lang="stats-event-4">European Championship Round 1</td>
-            <td>June 14, 2025</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-        </tbody>
-      </table>
+    <section id="achievements" class="section fade-in">
+        <h2>Achievements</h2>
+        <ul>
+            <li>[Achievement 1]</li>
+            <li>[Achievement 2]</li>
+            <!-- Add more achievements -->
+        </ul>
     </section>
-
-    <section id="calendar" class="page-section">
-      <h2 data-lang="calendar-title">Season Calendar</h2>
-      <p data-lang="calendar-intro">Here’s my racing schedule for the 2025 European Rental Karting Championship. Join me on the track!</p>
-      <table class="calendar-table">
-        <thead>
-          <tr>
-            <th data-lang="calendar-date">Date</th>
-            <th data-lang="calendar-event">Event</th>
-            <th data-lang="calendar-location">Location</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>June 14, 2025</td>
-            <td data-lang="calendar-event-1">European Rental Karting Championship - Round 1</td>
-            <td>Spain</td>
-          </tr>
-          <tr>
-            <td>July 12, 2025</td>
-            <td data-lang="calendar-event-2">European Rental Karting Championship - Round 2</td>
-            <td>Ostricourt, France</td>
-          </tr>
-          <tr>
-            <td>September 13, 2025</td>
-            <td data-lang="calendar-event-3">European Rental Karting Championship - Round 3</td>
-            <td>Oldenzaal, Netherlands</td>
-          </tr>
-        </tbody>
-      </table>
+    <section id="media" class="section fade-in">
+        <h2>Media Gallery</h2>
+        <div class="gallery">
+            <img src="image1.jpg" alt="Alex racing">
+            <img src="image2.jpg" alt="Alex on podium">
+            <img src="image3.jpg" alt="Alex training">
+            <!-- Add more images -->
+        </div>
     </section>
-
-    <section id="sponsorship" class="page-section">
-      <h2 data-lang="sponsorship-title">Sponsor Me</h2>
-      <p data-lang="sponsorship-content">Why back me? I bring talent from Europe’s rental karting scene, a growing 6,000+ Instagram following, and the potential to go pro. You’ll get your logo on my suit, shoutouts to my followers, and a stake in my racing journey. Contact me at alexradita12@gmail.com or @alexraditaracing to team up!</p>
+    <section id="contact" class="section fade-in">
+        <h2>Contact</h2>
+        <form action="mailto:alexradita12@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
+    <footer>
+        <p>© 2025 Alex Radita. All rights reserved.</p>
+    </footer>
 
-    <section id="media" class="page-section">
-      <h2 data-lang="media-title">Media</h2>
-      <p data-lang="media-content">Check out my racing journey through photos!</p>
-      <div class="media-gallery">
-        <img src="image1.jpg" alt="Alex Radita racing on the track" data-lang="media-photo-1-alt">
-        <img src="image2.jpg" alt="Alex Radita on the podium" data-lang="media-photo-2-alt">
-        <img src="image3.jpg" alt="Alex Radita training in a race kart" data-lang="media-photo-3-alt">
-      </div>
-    </section>
-
-    <section id="contact" class="page-section">
-      <h2 data-lang="contact-title">Contact</h2>
-      <p data-lang="contact-content">Ready to support my racing dream? Reach out at alexradita12@gmail.com or DM me on Instagram at @alexraditaracing. Let’s make it happen!</p>
-    </section>
-  </main>
-
-  <footer>
-    <p data-lang="footer-content">© 2025 Alex Radita. All rights reserved.</p>
-  </footer>
-
-  <!-- Smooth Scroll JavaScript -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-
-  <!-- Language Toggle JavaScript -->
-  <script>
-    const translations = {
-      en: {
-        "logo-alt": "Alex Radita Logo",
-        "nav-home": "Home",
-        "nav-about": "About",
-        "nav-achievements": "Achievements",
-        "nav-calendar": "Calendar",
-        "nav-sponsorship": "Sponsor Me",
-        "nav-media": "Media",
-        "nav-contact": "Contact",
-        "home-title": "Welcome to My Karting Journey",
-        "home-content": "Hey there! I’m Alex Radita, a rental karting driver from Romania with a passion for speed and competition. Explore my story, achievements, and how you can support my racing dreams.",
-        "about-title": "About Me",
-        "about-content": "I’m Alex Radita, a Romanian driver in the European Rental Karting Championship. My karting journey began in early 2024, where I hit the top 200 out of over 10,000 drivers in my first session. By May, I’d climbed to the top 50 in the Junior category, and in July, I got a week to train in a race kart—though funding for pro racing wasn’t there yet. That experience fueled my drive, and I soon earned a spot in adult karts. In December 2024, I signed up for the European Rental Karting Championship, and now I’m all in to find sponsors to fuel my dream of going pro.",
-        "achievements-title": "Achievements",
-        "achievements-1": "Climbed to Top 50 in the Junior category in just a few weeks",
-        "achievements-2": "Trained in a race kart for a week in July 2024, sharpening my skills",
-        "achievements-3": "Will race for the European Rental Karting Championship in Summer 2025",
-        "stats-title": "Performance Stats",
-        "stats-event": "Event",
-        "stats-date": "Date",
-        "stats-ranking": "Ranking",
-        "stats-lap-time": "Best Lap Time",
-        "stats-event-1": "First Session 2024",
-        "stats-event-2": "Junior Category Peak",
-        "stats-event-3": "Race Kart Training",
-        "stats-event-4": "European Championship Round 1",
-        "calendar-title": "Season Calendar",
-        "calendar-intro": "Here’s my racing schedule for the 2025 European Rental Karting Championship. Join me on the track!",
-        "calendar-date": "Date",
-        "calendar-event": "Event",
-        "calendar-location": "Location",
-        "calendar-event-1": "European Rental Karting Championship - Round 1",
-        "calendar-event-2": "European Rental Karting Championship - Round 2",
-        "calendar-event-3": "European Rental Karting Championship - Round 3",
-        "sponsorship-title": "Sponsor Me",
-        "sponsorship-content": "Why back me? I bring talent from Europe’s rental karting scene, a growing 6,000+ Instagram following, and the potential to go pro. You’ll get your logo on my suit, shoutouts to my followers, and a stake in my racing journey. Contact me at alexradita12@gmail.com or @alexraditaracing to team up!",
-        "media-title": "Media",
-        "media-content": "Check out my racing journey through photos!",
-        "media-photo-1-alt": "Alex Radita racing on the track",
-        "media-photo-2-alt": "Alex Radita on the podium",
-        "media-photo-3-alt": "Alex Radita training in a race kart",
-        "contact-title": "Contact",
-        "contact-content": "Ready to support my racing dream? Reach out at alexradita12@gmail.com or DM me on Instagram at @alexraditaracing. Let’s make it happen!",
-        "footer-content": "© 2025 Alex Radita. All rights reserved."
-      },
-      ro: {
-        "logo-alt": "Logo Alex Radita",
-        "nav-home": "Acasă",
-        "nav-about": "Despre",
-        "nav-achievements": "Realizări",
-        "nav-calendar": "Calendar",
-        "nav-sponsorship": "Sponsorizează-mă",
-        "nav-media": "Media",
-        "nav-contact": "Contact",
-        "home-title": "Bun venit în călătoria mea de karting",
-        "home-content": "Bună! Sunt Alex Radita, un pilot de karting de închiriat din România, pasionat de viteză și competiție. Descoperă povestea mea, realizările și cum poți susține visurile mele de curse.",
-        "about-title": "Despre Mine",
-        "about-content": "Sunt Alex Radita, un pilot român în Campionatul European de Karting de Închiriat. Călătoria mea în karting a început la începutul anului 2024, când am ajuns în primii 200 din peste 10.000 de piloți la prima mea sesiune. Până în mai, am urcat în primii 50 în categoria Junior, iar în iulie am avut o săptămână de antrenament într-un kart de curse—deși nu am avut fonduri pentru curse profesionale. Acea experiență mi-a alimentat ambiția, și curând am câștigat un loc în karturile pentru adulți. În decembrie 2024, m-am înscris în Campionatul European de Karting de Închiriat, iar acum fac tot posibilul să găsesc sponsori pentru a-mi susține visul de a deveni profesionist.",
-        "achievements-title": "Realizări",
-        "achievements-1": "Urcat în primii 50 în categoria Junior în doar câteva săptămâni",
-        "achievements-2": "Antrenat timp de o săptămână într-un kart de curse în iulie 2024, îmbunătățindu-mi abilitățile",
-        "achievements-3": "Voi concura în Campionatul European de Karting de Închiriat în vara lui 2025",
-        "stats-title": "Statistici de Performanță",
-        "stats-event": "Eveniment",
-        "stats-date": "Dată",
-        "stats-ranking": "Clasament",
-        "stats-lap-time": "Cel Mai Bun Timp pe Tur",
-        "stats-event-1": "Prima Sesiune 2024",
-        "stats-event-2": "Vârf Categorie Junior",
-        "stats-event-3": "Antrenament Kart de Cursă",
-        "stats-event-4": "Etapa 1 Campionatul European",
-        "calendar-title": "Calendar Sezon",
-        "calendar-intro": "Iată programul meu de curse pentru Campionatul European de Karting de Închiriat 2025. Vino să mă susții pe pistă!",
-        "calendar-date": "Dată",
-        "calendar-event": "Eveniment",
-        "calendar-location": "Locație",
-        "calendar-event-1": "Campionatul European de Karting de Închiriat - Etapa 1",
-        "calendar-event-2": "Campionatul European de Karting de Închiriat - Etapa 2",
-        "calendar-event-3": "Campionatul European de Karting de Închiriat - Etapa 3",
-        "sponsorship-title": "Sponsorizează-mă",
-        "sponsorship-content": "De ce să mă susții? Aduc talent din scena europeană de karting de închiriat, peste 6.000 de urmăritori pe Instagram și potențial de a deveni profesionist. Vei beneficia de logo-ul tău pe echipamentul meu, menționări pentru urmăritorii mei și un rol în călătoria mea de curse. Contactează-mă la alexandru.radita@gmail.com sau @alexraditaracing pentru a ne asocia!",
-        "media-title": "Media",
-        "media-content": "Descoperă călătoria mea de curse prin poze!",
-        "media-photo-1-alt": "Alex Radita concurând pe pistă",
-        "media-photo-2-alt": "Alex Radita pe podium",
-        "media-photo-3-alt": "Alex Radita antrenându-se într-un kart de curse",
-        "contact-title": "Contact",
-        "contact-content": "Gata să susții visul meu de curse? Contactează-mă la alexradita12@gmail.com sau trimite-mi un mesaj pe Instagram la @alexraditaracing. Hai să facem asta împreună!",
-        "footer-content": "© 2025 Alex Radita. Toate drepturile rezervate."
-      }
-    };
-
-    let currentLang = 'en'; // Default language is English
-
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'ro' : 'en';
-      document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'RO' : 'EN';
-      document.querySelectorAll('[data-lang]').forEach(element => {
-        const key = element.getAttribute('data-lang');
-        if (element.tagName === 'IMG') {
-          element.alt = translations[currentLang][key];
-        } else {
-          element.textContent = translations[currentLang][key];
+    <!-- JavaScript for scroll animations -->
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
         }
-      });
-    }
 
-    // Set initial language to English manually
-    document.querySelectorAll('[data-lang]').forEach(element => {
-      const key = element.getAttribute('data-lang');
-      if (element.tagName === 'IMG') {
-        element.alt = translations.en[key];
-      } else {
-        element.textContent = translations.en[key];
-      }
-    });
-  </script>
+        function handleScroll() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                if (isInViewport(section)) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    </script>
 </body>
 </html>
