@@ -11,9 +11,9 @@
       <button id="lang-toggle" onclick="toggleLanguage()">RO</button>
     </div>
     <a href="#home">
-      <img src="logo.png" alt="Alex Radita Logo" class="logo animate-fade-in" data-lang="logo-alt">
+      <img src="logo.png" alt="Alex Radita Logo" class="logo" data-lang="logo-alt">
     </a>
-    <nav class="navbar">
+    <nav>
       <a href="#home" data-lang="nav-home">Home</a>
       <a href="#about" data-lang="nav-about">About</a>
       <a href="#achievements" data-lang="nav-achievements">Achievements</a>
@@ -25,17 +25,17 @@
   </header>
 
   <main>
-    <section id="home" class="page-section hero animate-fade-in">
+    <section id="home" class="page-section">
       <h2 data-lang="home-title">Welcome to My Karting Journey</h2>
       <p data-lang="home-content">Hey there! I’m Alex Radita, a rental karting driver from Romania with a passion for speed and competition. Explore my story, achievements, and how you can support my racing dreams.</p>
     </section>
 
-    <section id="about" class="page-section section animate-slide-up">
+    <section id="about" class="page-section">
       <h2 data-lang="about-title">About Me</h2>
       <p data-lang="about-content">I’m Alex Radita, a Romanian driver in the European Rental Karting Championship. My karting journey began in early 2024, where I hit the top 200 out of over 10,000 drivers in my first session. By May, I’d climbed to the top 50 in the Junior category, and in July, I got a week to train in a race kart—though funding for pro racing wasn’t there yet. That experience fueled my drive, and I soon earned a spot in adult karts. In December 2024, I signed up for the European Rental Karting Championship, and now I’m all in to find sponsors to fuel my dream of going pro.</p>
     </section>
 
-    <section id="achievements" class="page-section section animate-slide-up">
+    <section id="achievements" class="page-section">
       <h2 data-lang="achievements-title">Achievements</h2>
       <ul>
         <li data-lang="achievements-1">Climbed to Top 50 in the Junior category in just a few weeks</li>
@@ -43,7 +43,7 @@
         <li data-lang="achievements-3">Will race for the European Rental Karting Championship in Summer 2025</li>
       </ul>
       <h3 data-lang="stats-title">Performance Stats</h3>
-      <table class="stats-table animate-fade-in">
+      <table class="stats-table">
         <thead>
           <tr>
             <th data-lang="stats-event">Event</th>
@@ -81,10 +81,10 @@
       </table>
     </section>
 
-    <section id="calendar" class="page-section section animate-slide-up">
+    <section id="calendar" class="page-section">
       <h2 data-lang="calendar-title">Season Calendar</h2>
       <p data-lang="calendar-intro">Here’s my racing schedule for the 2025 European Rental Karting Championship. Join me on the track!</p>
-      <table class="calendar-table animate-fade-in">
+      <table class="calendar-table">
         <thead>
           <tr>
             <th data-lang="calendar-date">Date</th>
@@ -112,22 +112,22 @@
       </table>
     </section>
 
-    <section id="sponsorship" class="page-section section animate-slide-up">
+    <section id="sponsorship" class="page-section">
       <h2 data-lang="sponsorship-title">Sponsor Me</h2>
       <p data-lang="sponsorship-content">Why back me? I bring talent from Europe’s rental karting scene, a growing 6,000+ Instagram following, and the potential to go pro. You’ll get your logo on my suit, shoutouts to my followers, and a stake in my racing journey. Contact me at alexandru.radita@gmail.com or @alexraditaracing to team up!</p>
     </section>
 
-    <section id="media" class="page-section section animate-slide-up">
+    <section id="media" class="page-section">
       <h2 data-lang="media-title">Media</h2>
       <p data-lang="media-content">Check out my racing journey through photos!</p>
-      <div class="media-gallery animate-fade-in">
+      <div class="media-gallery">
         <img src="image1.jpg" alt="Alex Radita racing on the track" data-lang="media-photo-1-alt">
         <img src="image2.jpg" alt="Alex Radita on the podium" data-lang="media-photo-2-alt">
         <img src="image3.jpg" alt="Alex Radita training in a race kart" data-lang="media-photo-3-alt">
       </div>
     </section>
 
-    <section id="contact" class="page-section section animate-slide-up">
+    <section id="contact" class="page-section">
       <h2 data-lang="contact-title">Contact</h2>
       <p data-lang="contact-content">Ready to support my racing dream? Reach out at alexandru.radita@gmail.com or DM me on Instagram at @alexraditaracing. Let’s make it happen!</p>
     </section>
@@ -137,7 +137,7 @@
     <p data-lang="footer-content">© 2025 Alex Radita. All rights reserved.</p>
   </footer>
 
-  <!-- Smooth Scroll and Animation JavaScript -->
+  <!-- Smooth Scroll JavaScript -->
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -147,30 +147,10 @@
         });
       });
     });
+  </script>
 
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
-
-    function handleScroll() {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(section => {
-        if (isInViewport(section)) {
-          section.classList.add('visible');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-
-    // Language Toggle Script
+  <!-- Language Toggle JavaScript -->
+  <script>
     const translations = {
       en: {
         "logo-alt": "Alex Radita Logo",
