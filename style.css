@@ -17,7 +17,7 @@ header {
   background: #000;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .language-toggle {
@@ -49,34 +49,53 @@ header {
   border-radius: 5px;
   background: #222;
   transition: transform 0.3s ease;
+  opacity: 0;
+}
+
+.logo.animate-fade-in {
+  animation: fadeIn 1s ease-in forwards;
 }
 
 .logo:hover {
   transform: scale(1.05);
 }
 
-nav {
+nav.navbar {
   display: flex;
 }
 
-nav a {
+nav.navbar a {
   color: orange;
   text-decoration: none;
   padding: 10px 15px;
   margin-left: 10px;
   text-transform: uppercase;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: color 0.3s ease;
+  position: relative;
 }
 
-nav a:first-child {
+nav.navbar a:first-child {
   margin-left: 0;
 }
 
-nav a:hover {
+nav.navbar a:hover {
+  color: red;
+}
+
+nav.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
   background: red;
-  color: white;
-  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+nav.navbar a:hover::after {
+  width: 100%;
 }
 
 .page-section {
@@ -87,6 +106,31 @@ nav a:hover {
   margin-bottom: 20px;
   border-radius: 10px;
   border: 1px solid #333;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.page-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero {
+  background: url('hero.jpg') no-repeat center center;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+  opacity: 0;
+}
+
+.hero.animate-fade-in {
+  animation: fadeIn 1s ease-in forwards;
 }
 
 h2 {
@@ -195,6 +239,14 @@ ul li::before {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.media-gallery.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .media-gallery img {
@@ -207,6 +259,17 @@ ul li::before {
 
 .media-gallery img:hover {
   transform: scale(1.05);
+}
+
+.image-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.image-item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 footer {
@@ -231,10 +294,10 @@ footer {
     max-width: 120px;
     margin: 10px 0;
   }
-  nav {
+  nav.navbar {
     margin-top: 15px;
   }
-  nav a {
+  nav.navbar a {
     margin: 10px 0;
     display: block;
   }
@@ -246,5 +309,9 @@ footer {
   }
   .media-gallery img {
     max-width: 100%;
+  }
+  .hero {
+    height: 60vh;
+    margin-top: 40px;
   }
 }
