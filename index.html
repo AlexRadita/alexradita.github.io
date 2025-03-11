@@ -6,66 +6,51 @@
     <title>Alex Radita - Karting Star</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#hero">Home</a>
-        <a href="#why-sponsor">Why Sponsor</a>
-        <a href="#about">About</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#media">Media</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <header id="hero" class="hero">
-        <div class="hero-content">
-            <h1 class="animate-fade-in">Alex Radita</h1>
-            <p class="animate-fade-in">Rising Star in European Karting</p>
-            <a href="#why-sponsor" class="btn animate-fade-in">Sponsor Me</a>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Alex Radita Logo">
+        </div>
+        <nav class="navbar">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#media">Media</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="language-toggle">
+            <button id="lang-toggle" onclick="toggleLanguage()">RO</button>
         </div>
     </header>
-    <section id="why-sponsor" class="section fade-in">
-        <h2>Why Sponsor Alex?</h2>
-        <div class="benefits">
-            <div>
-                <i class="fas fa-users"></i>
-                <h3>Reach a Growing Audience</h3>
-                <p>With over 6,000 Instagram followers and counting, your brand will gain visibility.</p>
-            </div>
-            <div>
-                <i class="fas fa-trophy"></i>
-                <h3>Align with Success</h3>
-                <p>Sponsor a rising star with a track record of achievements.</p>
-            </div>
-            <div>
-                <i class="fas fa-handshake"></i>
-                <h3>Partnership Opportunities</h3>
-                <p>Collaborate on events, promotions, and more.</p>
-            </div>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Alex Radita</h1>
+            <p>Rising Star in European Karting</p>
+            <a href="#contact" class="btn">Sponsor Me</a>
         </div>
     </section>
-    <section id="about" class="section fade-in">
-        <h2>About Alex</h2>
-        <p>[Add your bio here with a photo]</p>
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I’m Alex Radita, a Romanian driver in the European Rental Karting Championship. My karting journey began in early 2024, where I hit the top 200 out of over 10,000 drivers in my first session. By May, I’d climbed to the top 50 in the Junior category, and in July, I got a week to train in a race kart—though funding for pro racing wasn’t there yet. That experience fueled my drive, and I soon earned a spot in adult karts. In December 2024, I signed up for the European Rental Karting Championship, and now I’m all in to find sponsors to fuel my dream of going pro.</p>
     </section>
-    <section id="achievements" class="section fade-in">
+    <section id="achievements" class="section">
         <h2>Achievements</h2>
         <ul>
-            <li>[Achievement 1]</li>
-            <li>[Achievement 2]</li>
-            <!-- Add more achievements -->
+            <li>Climbed to Top 50 in the Junior category in just a few weeks</li>
+            <li>Trained in a race kart for a week in July 2024, sharpening my skills</li>
+            <li>Will race for the European Rental Karting Championship in Summer 2025</li>
         </ul>
     </section>
-    <section id="media" class="section fade-in">
+    <section id="media" class="section">
         <h2>Media Gallery</h2>
         <div class="gallery">
             <img src="image1.jpg" alt="Alex racing">
             <img src="image2.jpg" alt="Alex on podium">
             <img src="image3.jpg" alt="Alex training">
-            <!-- Add more images -->
         </div>
     </section>
-    <section id="contact" class="section fade-in">
+    <section id="contact" class="section">
         <h2>Contact</h2>
         <form action="mailto:alexradita12@gmail.com" method="post" enctype="text/plain">
             <input type="text" name="name" placeholder="Your Name" required>
@@ -78,29 +63,14 @@
         <p>© 2025 Alex Radita. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for scroll animations -->
+    <!-- Language Toggle Script -->
     <script>
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
+        let currentLang = 'en';
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ro' : 'en';
+            document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'RO' : 'EN';
+            // You can add translations here later
         }
-
-        function handleScroll() {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                if (isInViewport(section)) {
-                    section.classList.add('visible');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
     </script>
 </body>
 </html>
